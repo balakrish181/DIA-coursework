@@ -1,0 +1,2 @@
++100 for hit
+0 otherwise

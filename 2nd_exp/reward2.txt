@@ -1,0 +1,4 @@
++100 for hit
+-5 for firing bullet
+-1 for each timestep without hitting the target=
+0 otherwise

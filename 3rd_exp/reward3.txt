@@ -1,0 +1,5 @@
++100 for hit
+-5 for firing bullet
+-1 for each time_step without hitting the target
++1 for being close to the target and no penalty for passing a time_step without hitting the target
+0 otherwise
