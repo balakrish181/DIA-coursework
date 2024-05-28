@@ -54,4 +54,4 @@ The folder `exp_results` contains the results, and the notebook `/dia-sci-questi
 1. [Patrick Loeber's Snake AI using PyTorch](https://github.com/patrickloeber/snake-ai-pytorch)
 2. [Shiva Verma's Orbit Paddle](https://github.com/shivaverma/Orbit/tree/master/Paddle)
 3. Laud, Adam, and Gerald DeJong. "The influence of reward on the speed of reinforcement learning: An analysis of shaping." Proceedings of the 20th International Conference on Machine Learning (ICML-03). 2003.
-4. Vinitsky, Eugene, et al. "Robust reinforcement learning using adversarial populations." arXiv preprint arXiv:2008.01825 (2020).
+4. Lee, Kimin, et al. "Network randomization: A simple technique for generalization in deep reinforcement learning." arXiv preprint arXiv:1910.05396 (2019).
