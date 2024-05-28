@@ -93,7 +93,7 @@ batch_size = 64
 
 agent = DQNAgent(state_size, action_size)
 
-agent.model.load_state_dict(torch.load('G:\DIA\dqn_model_trained_longer_with_scheduler.pth'))
+agent.model.load_state_dict(torch.load('2nd_exp\dqn_model_reward2.pth'))
 
 env = Battle()
 
@@ -112,7 +112,7 @@ for episode in range(num_test_episodes):
 
     while step < MAX_STEPS_PER_EPISODE:
         action = agent.act(state)
-        next_state, reward, done, score = env.rl_space(action)
+        next_state, reward, done, score,_ = env.rl_space(action)
         state = next_state
         total_reward += reward
         step += 1

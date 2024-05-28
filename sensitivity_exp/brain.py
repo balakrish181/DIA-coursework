@@ -87,16 +87,16 @@ class DQNAgent:
             self.epsilon *= self.epsilon_decay
 
 # Define training parameters
-state_size = 9  # Adjust based on the state representation in the environment
-action_size = 5  # Adjust based on the number of actions in the environment
+state_size = 9  
+action_size = 5  
 num_episodes = 500
 batch_size = 256
 
-# Initialize the DQN agent
+
 agent = DQNAgent(state_size, action_size)
 
-env = Battle()
-# Training loop
+env = Battle(random_init=False,agent_pos=(0,0))
+
 metrics = []
 scores=[]
 bullets = []

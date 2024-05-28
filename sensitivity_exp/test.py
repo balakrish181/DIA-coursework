@@ -86,14 +86,14 @@ class DQNAgent:
 
 
 # Define training parameters
-state_size = 9  # Adjust based on the state representation in the environment
-action_size = 5  # Adjust based on the number of actions in the environment
+state_size = 9  
+action_size = 5  
 num_episodes = 500
 batch_size = 64
 
 agent = DQNAgent(state_size, action_size)
 
-agent.model.load_state_dict(torch.load('D:\dia_experiment_dqn\sensitivity_exp\dqn_model_reward3.pth'))
+agent.model.load_state_dict(torch.load('sensitivity_exp\dqn_model_reward3.pth'))
 
 
 num_test_episodes = 10
@@ -163,7 +163,6 @@ for each in range(diff_init):
     #env.close_turtle()
 
 import pandas as pd
-# Assuming test_rewards and test_scores are lists or arrays of equal length
 data = {'test_rewards': mean_rewards,'bullets_fired': mean_bullets, 'test_scores': mean_scores}
 df = pd.DataFrame(data)
 df.to_csv('test_metrics_non_random_init.csv', index=False)

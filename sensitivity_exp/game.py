@@ -22,12 +22,15 @@ class Battle:
         self.target.speed(0)
         self.target.penup()
         self.target.color('red')
-        if random_init and not target_pos :
+        if random_init :
             self.target.goto(random.randint(-WINDOW_WIDTH/2, WINDOW_WIDTH/2), random.randint(-WINDOW_HEIGHT/2, WINDOW_HEIGHT/2))
 
         else:
+            if target_pos:
+                self.target.goto(target_pos)
             
-            self.target.goto(target_pos)
+            else:
+                self.target.goto((10,70))
                 
 
         self.target_direction = random.choice([0, 1, 2, 3])  # Numerical values for directions
@@ -271,16 +274,24 @@ class Battle:
             self.bullet_direction = 4
 
 
-        if self.random_init and not self.target_pos:
+        if self.random_init :
         
             self.target.goto(random.randint(-WINDOW_WIDTH/2, WINDOW_WIDTH/2), random.randint(-WINDOW_HEIGHT/2, WINDOW_HEIGHT/2))
             self.target_direction = random.choice([0, 1, 2, 3])
             self.target_direction_counter = random.randint(TARGET_DIRECTION_COUNTER_MIN, TARGET_DIRECTION_COUNTER_MAX)
 
         else:
-            self.target.goto(self.target_pos)
-            self.target_direction = random.choice([0, 1, 2, 3])
-            self.target_direction_counter = random.randint(TARGET_DIRECTION_COUNTER_MIN, TARGET_DIRECTION_COUNTER_MAX)
+
+            if self.target_pos:
+
+                self.target.goto(self.target_pos)
+                self.target_direction = random.choice([0, 1, 2, 3])
+                self.target_direction_counter = random.randint(TARGET_DIRECTION_COUNTER_MIN, TARGET_DIRECTION_COUNTER_MAX)
+
+            else:
+                self.target.goto((70,10))
+                self.target_direction = random.choice([0, 1, 2, 3])
+                self.target_direction_counter = random.randint(TARGET_DIRECTION_COUNTER_MIN, TARGET_DIRECTION_COUNTER_MAX)                
 
 
 
